@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Equacao Geral Simulator</title>
+    <script src="main.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="title">
+        <div class="title-text"><span class="title-text">Equacao</span></div>
+        <div class="title-text"><span class="title-text">Geral</span></div>
+        <div class="title-text"><span class="title-text">Simulator</span></div>
+    </div>
+    <div id="reta">
+        <div style="float: left;">
+            <div class="reta-st">
+                <span class="subtitle streta">
+                    Preencha a posicao dos pontos:&nbsp;
+                </span>
+            </div>
+            <table class="reta-tb">
+            <tr>
+                <td></td>
+                <td class="reta-td">X</td>
+                <td class="reta-td">Y</td>
+            </tr>
+            <tr>
+                <td class="reta-td">Ponto A:</td>
+                <td class="reta-td"><input type="number" step="0.01" onkeyup="checkreta()" class="inp-reta" id="AX"></td>
+                <td class="reta-td"><input type="number" step="0.01" onkeyup="checkreta()" class="inp-reta" id="AY"></td>
+            </tr>
+            <tr>
+                <td class="reta-td">Ponto B:</td>
+                <td class="reta-td"><input type="number" step="0.01" onkeyup="checkreta()" class="inp-reta" id="BX"></td>
+                <td class="reta-td"><input type="number" step="0.01" onkeyup="checkreta()" class="inp-reta" id="BY"></td>
+            </tr>
+        </table>
+        </div>
+        <div style="float: left; margin: 0 0 0 69px;">
+            <div class="reta-st">
+                <span class="subtitle streta">
+                    Equacao:&nbsp;
+                </span>
+            </div>
+            <span id="reta-eq"></span>
+        </div>
+    </div>
+    <div id="teste">
+        <div style="float: left;">
+            <div class="teste-st">
+                <span class="subtitle stteste">
+                    Teste se um ponto pertence a reta:&nbsp;
+                </span>
+            </div>
+            <table class="teste-tb">
+                <tr>
+                    <td></td>
+                    <td class="teste-td">X</td>
+                    <td class="teste-td">Y</td>
+                </tr>
+                <tr>
+                    <td class="teste-td">Ponto N:</td>
+                    <td class="teste-td"><input type="number" step="0.01" onkeyup="checkteste()" class="inp-teste" id="NX"></td>
+                    <td class="teste-td"><input type="number" step="0.01" onkeyup="checkteste()" class="inp-teste" id="NY"></td>
+                </tr>
+            </table>
+        </div>
+        <div style="float: left; margin: 0 0 0 30px;">
+            <div class="teste-st">
+                <span class="subtitle stteste">
+                    Resultado:&nbsp;
+                </span>
+            </div>
+            <span id="teste-rst"></span>
+        </div>
+    </div>
+    <div id="bottom">
+        <span class="bottom-text">Desenvolvido por <a href="https://twitter.com/bibaromito" class="bottom-a">Lucca Bibar</a> pra aprender como isso funciona.</span>
+        <span class="bottom-text"> O <a href="https://drive.google.com/drive/folders/1-WN5EFbg8fCW-7_xs5na8nVp69ODMgco" class="bottom-a">Codigo Fonte</a> esta a disposicao de qualquer um que queira melhorar ou simplesmente ver como funciona o site</span>
+    </div>
+</body>
+</html>
