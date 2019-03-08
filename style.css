@@ -99,6 +99,13 @@ span.reta-eq{
     text-decoration: underline;
 }
 
+#reta-eq-err{
+    font-size: 18px;
+    color: white;
+    background-color: #da5353;
+    text-decoration: underline;
+}
+
 /* teste ==================================================================== */
 
 #teste{

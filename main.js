@@ -18,6 +18,13 @@ function checkreta(){
     pontos["BX"] = parseFloat(document.getElementById('BX').value);
     pontos["BY"] = parseFloat(document.getElementById('BY').value);
 
+    if(pontos["AX"] == pontos["BX"] && pontos["AY"] == pontos["BY"]){
+        document.getElementById('reta-eq').innerHTML = "";
+        document.getElementById('reta-eq-err').innerHTML = "Os pontos sao iguais";
+        document.getElementById('teste').style.visibility = "hidden";
+        return;
+    }
+
     var linhas = [];
     linhas["pos-X"] = pontos["AY"];
     linhas["pos-Y"] = pontos["BX"];
@@ -39,6 +46,7 @@ function checkreta(){
     eqr = eqr.replace(")", '');
 
     document.getElementById('reta-eq').innerHTML = eqr;
+    document.getElementById('reta-eq-err').innerHTML = "";
     document.getElementById('teste').style.visibility = "visible";
     checkteste();
 }
