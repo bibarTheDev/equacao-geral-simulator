@@ -1,14 +1,7 @@
 function checkreta(){
-    if (!document.getElementById('AX').value){
-        return;
-    }
-    if (!document.getElementById('AY').value){
-        return;
-    }
-    if (!document.getElementById('BX').value){
-        return;
-    }
-    if (!document.getElementById('BY').value){
+    if (!document.getElementById('AX').value || !document.getElementById('AY').value || !document.getElementById('BX').value || !document.getElementById('BY').value){
+        document.getElementById('reta-eq').innerHTML = "";
+        document.getElementById('teste').style.visibility = "hidden";
         return;
     }
 
@@ -38,12 +31,7 @@ function checkreta(){
     linhas["pos-S"] += linhas["neg-S"];
 
     eq = "(" + linhas["pos-X"] + "x) + (" + linhas["pos-Y"] + "y) + (" + linhas["pos-S"] + ") = 0";
-    var eqr = eq.replace('(', '');
-    eqr = eqr.replace(")", '');
-    eqr = eqr.replace('(', '');
-    eqr = eqr.replace(")", '');
-    eqr = eqr.replace('(', '');
-    eqr = eqr.replace(")", '');
+    var eqr = linhas["pos-X"] + "x + " + linhas["pos-Y"] + "y + " + linhas["pos-S"] + " = 0";
 
     document.getElementById('reta-eq').innerHTML = eqr;
     document.getElementById('reta-eq-err').innerHTML = "";
@@ -52,10 +40,8 @@ function checkreta(){
 }
 
 function checkteste(){
-    if (!document.getElementById('NX').value){
-        return;
-    }
-    if (!document.getElementById('NY').value){
+    if (!document.getElementById('NX').value || !document.getElementById('NY').value){
+        document.getElementById('teste-rst').innerHTML = "";
         return;
     }
 
